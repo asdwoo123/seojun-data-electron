@@ -2,7 +2,7 @@
  * 页面全局变量 $config
  */
 
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   // 应用名称
@@ -16,4 +16,4 @@ module.exports = {
 
   // 暗色风格托盘图标 (仅 macOS)
   trayIconDark: path.join(__dirname, '../assets/tray-icon/tray-icon-dark.png'),
-}
+};

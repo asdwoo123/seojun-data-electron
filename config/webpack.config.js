@@ -7,19 +7,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const TerserPlugin = require('terser-webpack-plugin')
 
-const { NODE_ENV } = process.env
+const { NODE_ENV } = process.env;
 
-const projectPath = process.cwd()
-const appPath = path.join(__dirname, `../src`)
+const projectPath = process.cwd();
+const appPath = path.join(__dirname, `../src`);
 
-const styleLoader = [{ loader: 'css-loader' }]
+const styleLoader = [{ loader: 'css-loader' }];
 if (NODE_ENV === 'development') {
   styleLoader.unshift({ loader: 'css-hot-loader' }, { loader: 'style-loader' })
 } else {
   styleLoader.unshift({ loader: MiniCssExtractPlugin.loader })
 }
 
-console.log(NODE_ENV, appPath)
+console.log(NODE_ENV, appPath);
 
 const webpackConfig = {
   mode: NODE_ENV,
@@ -99,6 +99,9 @@ const webpackConfig = {
       $app: 'src/utils/app.js',
       $config: 'config/app.config.js',
     }),
+      new webpack.DefinePlugin({
+        "typeof window": "\"object\""
+      })
   ],
 }
 

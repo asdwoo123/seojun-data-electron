@@ -15,7 +15,7 @@ function creatTray({ menus = defaultMenus, title = appName, icon } = {}) {
   tray.setContextMenu(Menu.buildFromTemplate(menus))
   tray.on('double-click', () => {
     createWindow('home')
-  })
+  });
 
   return tray
 }

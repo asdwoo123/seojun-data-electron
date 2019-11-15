@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 
 const config = {
@@ -7,6 +7,6 @@ const config = {
   template: path.join(__dirname, '../src/app/index.html'),
   dist: path.join(__dirname, '../dist'),
   publicPath: '/'
-}
+};
 
-module.exports = config
+module.exports = config;

@@ -3,11 +3,11 @@ const fixedConfig = { resizable: false, maximizable: false, minimizable: false }
 const urls = {
   home: { url: '/', config: { title: 'home' } },
 
-  demo1: { url: '/demo/1', config: { title: 'demo-1', minWidth: 600, minHeight: 400 } },
-  demo2: { url: '/demo/2', config: { title: 'demo-2', minWidth: 600, minHeight: 400 } },
+  demo1: { url: '/history/1', config: { title: 'history-1', minWidth: 600, minHeight: 400 } },
+  demo2: { url: '/history/2', config: { title: 'history-2', minWidth: 600, minHeight: 400 } },
 
   about: {
-    url: '/about',
+    url: '/monitor',
     config: {
       title: ' 关于',
       width: 300, height: 240,
@@ -15,6 +15,6 @@ const urls = {
     }
   },
 
-}
+};
 
-module.exports = urls
+module.exports = urls;

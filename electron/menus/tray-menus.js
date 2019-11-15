@@ -1,17 +1,14 @@
-const { createWindow } = require('../window')
+const { createWindow } = require('../window');
+const { app } = require('electron');
 
 const trayMenus = [
-  { label: 'home', click: () => createWindow('home') },
+  { label: 'monitor', click: () => createWindow('home').show() },
+  { label: 'history', click: () => createWindow('history') },
+  { label: 'quit', click: () => {
+    app.isQuiting = true;
+    app.quit();
+    }
+  }
+];
 
-  { type: 'separator' },
-
-  { label: 'demo1', click: () => createWindow('demo1') },
-  { label: 'demo2', click: () => createWindow('demo2') },
-
-  { type: 'separator' },
-
-  { label: 'about', click: () => createWindow('about') },
-  { label: 'quit', role: 'quit' }
-]
-
-module.exports = trayMenus
+module.exports = trayMenus;
